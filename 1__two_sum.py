@@ -27,3 +27,5 @@ class Solution:
             if va in info:
                 return [info[va], i]
             info[nums[i]] = i
+
+            
