@@ -25,4 +25,16 @@ from typing import List
 
 class Solution:
     def countBits(self, n: int) -> List[int]:
-        pass
+        ans = [0]*(n+1)
+        for i in range(n+1):
+            if i == 0:
+                ans[i] = 0
+            else:
+                quotient = i // 2
+                remainder = i % 2
+                if remainder == 0:
+                    value = ans[quotient]
+                else:
+                    value = ans[quotient] + 1 
+                ans[i] = value
+        return ans
