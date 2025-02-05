@@ -24,25 +24,25 @@ from typing import List
 
 class Solution:
     """Solution 1"""
-    def missingNumber(self, nums: List[int]) -> int:
-        mark = 0
-        total = 1
-        for element in nums:
-            if element == 0:
-                mark = 1
-            else:
-                total *= element
-        if mark == 0:
-            return 0
+    # def missingNumber(self, nums: List[int]) -> int:
+    #     mark = 0
+    #     total = 1
+    #     for element in nums:
+    #         if element == 0:
+    #             mark = 1
+    #         else:
+    #             total *= element
+    #     if mark == 0:
+    #         return 0
 
-        n = len(nums)
-        fac = self.factorial(n) 
-        quotient = fac//total
+    #     n = len(nums)
+    #     fac = self.factorial(n) 
+    #     quotient = fac//total
 
-        if quotient == 1:
-            return 1
-        else:
-            return quotient
+    #     if quotient == 1:
+    #         return 1
+    #     else:
+    #         return quotient
 
     def factorial(self, n):
         if n == 0 or n == 1:
