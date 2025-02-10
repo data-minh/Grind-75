@@ -23,4 +23,9 @@ so return 3221225471 which its binary representation is 101111111111111111111111
 
 class Solution:
     def reverseBits(self, n: int) -> int:
-        pass
+        # result = 0
+        # for i in range(32):
+        #     bit = (n >> i) & 1
+        #     result |= (bit << (31 - i))
+        # return result
+        return int(f"{n:032b}"[::-1], 2)
